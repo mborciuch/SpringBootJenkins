@@ -7,6 +7,8 @@ plugins {
     id 'com.palantir.docker-run' version '0.25.0'
 }
 
+version = scmVersion.version
+
 repositories {
     mavenCentral()
     jcenter()
@@ -28,8 +30,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-
-project.version = scmVersion.version
 
 String imageName = "misiek001/spring-boot-api-example:$version"
 
